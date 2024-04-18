@@ -1,0 +1,9 @@
+{
+	"name": "mvpDataFactory1",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "37a342d5-8fe6-48f7-8e11-0ba9960c5276",
+		"tenantId": "42f278d2-daaf-466e-b7b7-3c909c6adb8b"
+	}
+}

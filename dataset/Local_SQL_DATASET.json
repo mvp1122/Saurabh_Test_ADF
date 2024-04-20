@@ -1,5 +1,5 @@
 {
-	"name": "Local_SQL_DB",
+	"name": "Local_SQL_DATASET",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Local_SQL_server",

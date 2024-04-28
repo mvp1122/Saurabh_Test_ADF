@@ -54,7 +54,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Local_SQL_DATASET",
+						"referenceName": "Local_SQL_DATASET_Sales",
 						"type": "DatasetReference"
 					}
 				],

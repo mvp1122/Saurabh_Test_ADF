@@ -1,5 +1,5 @@
 {
-	"name": "Local_SQL_DATASET_Sales",
+	"name": "Local_SQL_DATASET_Error_Sales",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Local_SQL_server",
@@ -9,27 +9,29 @@
 		"type": "SqlServerTable",
 		"schema": [
 			{
-				"name": "ID",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "Name",
+				"name": "SaleDate",
 				"type": "nvarchar"
 			},
 			{
-				"name": "Email",
+				"name": "SaleItem",
 				"type": "nvarchar"
 			},
 			{
-				"name": "GenderID",
-				"type": "int",
-				"precision": 10
+				"name": "Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "quantity",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FileName",
+				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "sales"
+			"table": "sales_Error"
 		}
 	}
 }

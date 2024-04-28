@@ -1,0 +1,37 @@
+{
+	"name": "Azure_SQLSales",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azure_SQL_SV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "SaleDate",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SaleItem",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Country",
+				"type": "nvarchar"
+			},
+			{
+				"name": "quantity",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FileName",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sales"
+		}
+	}
+}

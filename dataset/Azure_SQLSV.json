@@ -1,0 +1,16 @@
+{
+	"name": "Azure_SQLSV",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Azure_SQL_SV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sales_Error"
+		}
+	}
+}

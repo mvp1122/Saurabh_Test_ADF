@@ -15,10 +15,13 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "Local_SQL_DATASET_Sales",
+						"referenceName": "Azure_SQLSaleError",
 						"type": "DatasetReference"
 					},
 					"name": "sink"
+				},
+				{
+					"name": "sink1"
 				}
 			],
 			"transformations": [
@@ -37,22 +40,21 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> ADLSFile",
 				"ADLSFile split(!isNull(toDate(SaleDate, 'dd-MMM-yyyy')),",
-				"     disjoint: false) ~> split1@(NoError)",
-				"split1@NoError sink(allowSchemaDrift: true,",
+				"     disjoint: false) ~> split1@(Error, NoError)",
+				"split1@Error sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          ID as integer,",
-				"          Name as string,",
-				"          Email as string,",
-				"          GenderID as integer",
-				"     ),",
 				"     deletable:false,",
 				"     insertable:true,",
 				"     updateable:false,",
 				"     upsertable:false,",
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink"
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink",
+				"split1@NoError sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}

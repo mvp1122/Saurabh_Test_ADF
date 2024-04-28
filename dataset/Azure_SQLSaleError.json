@@ -1,5 +1,5 @@
 {
-	"name": "Azure_SQLSV",
+	"name": "Azure_SQLSaleError",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Azure_SQL_SV",

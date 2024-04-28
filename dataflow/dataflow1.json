@@ -21,6 +21,10 @@
 					"name": "sink"
 				},
 				{
+					"dataset": {
+						"referenceName": "Azure_SQLSales",
+						"type": "DatasetReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -39,7 +43,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> ADLSFile",
-				"ADLSFile split(!isNull(toDate(SaleDate, 'dd-MMM-yyyy')),",
+				"ADLSFile split(isNull(toDate(SaleDate, 'dd-MMM-yyyy')),",
 				"     disjoint: false) ~> split1@(Error, NoError)",
 				"split1@Error sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -53,8 +57,21 @@
 				"     errorHandlingOption: 'stopOnFirstError') ~> sink",
 				"split1@NoError sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          SaleDate as string,",
+				"          SaleItem as string,",
+				"          Country as string,",
+				"          quantity as string,",
+				"          FileName as string",
+				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
 			]
 		}
 	}

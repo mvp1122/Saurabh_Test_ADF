@@ -31,6 +31,9 @@
 			"transformations": [
 				{
 					"name": "split1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -45,7 +48,8 @@
 				"     ignoreNoFilesFound: false) ~> ADLSFile",
 				"ADLSFile split(isNull(toDate(SaleDate, 'dd-MMM-yyyy')),",
 				"     disjoint: false) ~> split1@(Error, NoError)",
-				"split1@Error sink(allowSchemaDrift: true,",
+				"split1@Error derive(FileName = ERROR_FUNCTION('')) ~> derivedColumn1",
+				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     deletable:false,",
 				"     insertable:true,",

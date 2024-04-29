@@ -15,10 +15,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": {
-					"value": "@dataset().FileKaNaam",
-					"type": "Expression"
-				},
 				"container": "practise"
 			},
 			"columnDelimiter": ",",

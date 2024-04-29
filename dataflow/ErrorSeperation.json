@@ -37,13 +37,7 @@
 				}
 			],
 			"scriptLines": [
-				"source(output(",
-				"          SaleDate as string,",
-				"          SaleItem as string,",
-				"          Country as string,",
-				"          quantity as string",
-				"     ),",
-				"     allowSchemaDrift: true,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> ADLSFile",
 				"ADLSFile split(isNull(toDate(SaleDate, 'dd-MMM-yyyy')),",

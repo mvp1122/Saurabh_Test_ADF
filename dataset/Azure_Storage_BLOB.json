@@ -10,7 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Sales_IND_2020.csv",
 				"container": "practise"
 			},
 			"columnDelimiter": ",",

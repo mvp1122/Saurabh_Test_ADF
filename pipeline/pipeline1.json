@@ -7,14 +7,7 @@
 				"type": "ExecuteDataFlow",
 				"state": "Inactive",
 				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [
-					{
-						"activity": "Append variable1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -53,7 +46,7 @@
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"itemName"
+						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
@@ -66,8 +59,8 @@
 				}
 			},
 			{
-				"name": "Append variable1",
-				"type": "AppendVariable",
+				"name": "ForEach1",
+				"type": "ForEach",
 				"dependsOn": [
 					{
 						"activity": "Get Metadata1",
@@ -78,11 +71,21 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "Name",
-					"value": {
-						"value": "@activity('Get Metadata1').output.itemName",
-						"type": "Expression"
-					}
+					"activities": [
+						{
+							"name": "Append variable1",
+							"type": "AppendVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "Name",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						}
+					]
 				}
 			}
 		],

@@ -59,8 +59,6 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Set variable1",
@@ -82,7 +80,7 @@
 						"type": "DelimitedTextSource",
 						"additionalColumns": [
 							{
-								"name": "GGWP",
+								"name": "TPcolumn",
 								"value": {
 									"value": "@variables('TestVariable')",
 									"type": "Expression"
@@ -112,6 +110,19 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "AdditionalCOL",
+									"type": "String"
+								},
+								"sink": {
+									"name": "AdditionalCOL",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -127,7 +138,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DummyTXTFILE",
+						"referenceName": "OUTPUTCSV",
 						"type": "DatasetReference"
 					}
 				]

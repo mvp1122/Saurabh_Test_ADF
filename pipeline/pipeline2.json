@@ -51,7 +51,7 @@
 				"typeProperties": {
 					"variableName": "TestVariable",
 					"value": {
-						"value": "@activity('Get Metadata1').output.childItems",
+						"value": "@(activity('Get Metadata1').output.childItems)",
 						"type": "Expression"
 					}
 				}
@@ -59,6 +59,8 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Set variable1",
@@ -82,7 +84,7 @@
 							{
 								"name": "TPcolumn",
 								"value": {
-									"value": "@variables('TestVariable')",
+									"value": "@string(variables('TestVariable'))",
 									"type": "Expression"
 								}
 							}
@@ -146,7 +148,7 @@
 		],
 		"variables": {
 			"TestVariable": {
-				"type": "Array"
+				"type": "String"
 			}
 		},
 		"annotations": []

@@ -51,7 +51,7 @@
 				"typeProperties": {
 					"variableName": "TestVariable",
 					"value": {
-						"value": "@(activity('Get Metadata1').output.childItems)",
+						"value": "@string(activity('Get Metadata1').output.childItems)",
 						"type": "Expression"
 					}
 				}
@@ -59,8 +59,6 @@
 			{
 				"name": "Copy data1",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Set variable1",
@@ -134,7 +132,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DummyTXTFILE",
+						"referenceName": "DummyCSV",
 						"type": "DatasetReference"
 					}
 				],

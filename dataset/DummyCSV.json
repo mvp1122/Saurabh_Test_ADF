@@ -1,5 +1,5 @@
 {
-	"name": "DummyTXTFILE",
+	"name": "DummyCSV",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Temp.txt",
+				"fileName": "Dummy.csv",
 				"container": "practise"
 			},
 			"columnDelimiter": ",",

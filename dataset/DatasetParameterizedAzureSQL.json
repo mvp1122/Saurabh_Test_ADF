@@ -1,0 +1,15 @@
+{
+	"name": "DatasetParameterizedAzureSQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ParameterizedAzureSQL",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "CopyData-Local-to-Azure-SQL"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

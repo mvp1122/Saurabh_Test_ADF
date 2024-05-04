@@ -1,0 +1,23 @@
+{
+	"name": "ParamaterizesLOCALSQLSV",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"LocalDBName": {
+				"type": "string"
+			},
+			"LocalDBpassword": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "Integrated Security=False;Data Source=DESKTOP-C3NKA98;Initial Catalog=@{linkedService().LocalDBName};User ID=sa;Password=@{linkedService().LocalDBpassword}"
+		},
+		"connectVia": {
+			"referenceName": "SelfHostedIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

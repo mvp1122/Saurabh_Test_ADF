@@ -3,7 +3,25 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ParameterizedAzureSQL",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"AzureSQLDBName": {
+					"value": "@dataset().AzureSQLDBNameDS",
+					"type": "Expression"
+				},
+				"AzureSQLDBPassword": {
+					"value": "@dataset().AzureSQLDBPasswordDS",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"AzureSQLDBNameDS": {
+				"type": "string"
+			},
+			"AzureSQLDBPasswordDS": {
+				"type": "string"
+			}
 		},
 		"folder": {
 			"name": "CopyData-Local-to-Azure-SQL"

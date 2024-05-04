@@ -15,10 +15,69 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
-				}
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DatasetParameterizedLocalSQL",
+						"type": "DatasetReference",
+						"parameters": {
+							"TableName": {
+								"value": "@pipeline().parameters.PiplineTablename",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DatasetParameterizedAzureSQL",
+						"type": "DatasetReference",
+						"parameters": {
+							"AzureSQLDBNameDS": {
+								"value": "@pipeline().parameters.AzureSQLDBNameDS",
+								"type": "Expression"
+							},
+							"AzureSQLDBPasswordDS": {
+								"value": "@pipeline().parameters.AzureSQLDBPasswordDS",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
+		"parameters": {
+			"PiplineTablename": {
+				"type": "string"
+			},
+			"AzureSQLDBNameDS": {
+				"type": "string"
+			},
+			"AzureSQLDBPasswordDS": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

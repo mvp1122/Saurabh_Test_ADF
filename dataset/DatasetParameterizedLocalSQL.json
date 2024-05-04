@@ -9,10 +9,7 @@
 					"value": "@dataset().LocalDBName",
 					"type": "Expression"
 				},
-				"LocalDBpassword": {
-					"value": "@dataset().LocalDBpassword",
-					"type": "Expression"
-				}
+				"LocalDBpassword": "123456"
 			}
 		},
 		"parameters": {
@@ -20,9 +17,6 @@
 				"type": "string"
 			},
 			"LocalDBName": {
-				"type": "string"
-			},
-			"LocalDBpassword": {
 				"type": "string"
 			}
 		},

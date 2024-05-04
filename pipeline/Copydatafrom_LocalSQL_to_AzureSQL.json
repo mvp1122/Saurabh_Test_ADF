@@ -43,7 +43,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"TableName": {
-								"value": "@pipeline().parameters.PiplineTablename",
+								"value": "@pipeline().parameters.localTablename",
+								"type": "Expression"
+							},
+							"LocalDBName": {
+								"value": "@pipeline().parameters.LocalDBName",
 								"type": "Expression"
 							}
 						}
@@ -68,13 +72,19 @@
 			}
 		],
 		"parameters": {
-			"PiplineTablename": {
+			"localTablename": {
 				"type": "string"
 			},
 			"AzureSQLDBNameDS": {
 				"type": "string"
 			},
 			"AzureSQLDBPasswordDS": {
+				"type": "string"
+			},
+			"LocalDBName": {
+				"type": "string"
+			},
+			"LocalDBpassword": {
 				"type": "string"
 			}
 		},

@@ -1,0 +1,9 @@
+{
+	"name": "MVPInstance",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cabc5fa6-f2f4-4531-b948-e9304428904e",
+		"tenantId": "9125150b-8042-45d6-94da-e31db56187ff"
+	}
+}

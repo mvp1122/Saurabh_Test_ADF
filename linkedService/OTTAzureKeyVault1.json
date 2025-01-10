@@ -1,0 +1,10 @@
+{
+	"name": "OTTAzureKeyVault1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://mvpkeyvalt.vault.azure.net/"
+		}
+	}
+}

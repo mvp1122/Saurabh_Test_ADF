@@ -55,6 +55,10 @@
 			"type": "string",
 			"defaultValue": "https://adlsgen2mvp.dfs.core.windows.net/"
 		},
+		"event_trigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/4397de67-ed69-48d5-a41d-001ec760acde/resourceGroups/MVPResourcegrp/providers/Microsoft.Storage/storageAccounts/adlsgen2mvp"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -117,6 +121,9 @@
 					},
 					"VM_LS_properties_typeProperties_userId": {
 						"value": "[parameters('VM_LS_properties_typeProperties_userId')]"
+					},
+					"event_trigger_properties_typeProperties_scope": {
+						"value": "[parameters('event_trigger_properties_typeProperties_scope')]"
 					}
 				}
 			},

@@ -40,6 +40,9 @@
 		},
 		"vm_adls_LINKED_SERVICE_properties_typeProperties_url": {
 			"value": "https://adlsgen2mvp.dfs.core.windows.net/"
+		},
+		"event_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/4397de67-ed69-48d5-a41d-001ec760acde/resourceGroups/MVPResourcegrp/providers/Microsoft.Storage/storageAccounts/adlsgen2mvp"
 		}
 	}
 }

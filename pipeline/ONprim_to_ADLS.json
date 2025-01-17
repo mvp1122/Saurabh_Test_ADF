@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "ONprim_to_ADLS",
 	"properties": {
 		"activities": [
 			{
@@ -15,8 +15,25 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "vm_injest_folder",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": []

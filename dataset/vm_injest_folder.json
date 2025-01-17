@@ -1,0 +1,27 @@
+{
+	"name": "vm_injest_folder",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "VM_LS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation",
+				"fileName": "*.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Col1",
+				"type": "String"
+			}
+		]
+	}
+}

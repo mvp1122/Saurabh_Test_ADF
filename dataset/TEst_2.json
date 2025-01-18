@@ -1,0 +1,21 @@
+{
+	"name": "TEst_2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SQL_Server_COMMON_LS",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"Server Name": "2025-sql-azure.database.windows.net",
+				"Database Name": "2025-sql",
+				"User Name": "sql-2025"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Employee"
+		}
+	}
+}

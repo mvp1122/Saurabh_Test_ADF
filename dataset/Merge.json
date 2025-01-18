@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "*",
+				"fileName": "*.csv",
 				"folderPath": "Final ISM Report Folder",
 				"fileSystem": "adp"
 			},

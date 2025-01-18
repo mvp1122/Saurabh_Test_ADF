@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "ADP",
+						"referenceName": "ADP2",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -15,7 +15,25 @@
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          CID as integer,",
+				"          CUID as integer,",
+				"          ClientName as string,",
+				"          PartnerName as string,",
+				"          ClientPC as string,",
+				"          ClientPCE as string,",
+				"          ClientPCC as string,",
+				"          PartnerM as string,",
+				"          PartnerMi as string,",
+				"          AdhocPay as string,",
+				"          GoLiveDate as date,",
+				"          TerminationDate as date,",
+				"          ContractStart as date,",
+				"          ContractEnd as date,",
+				"          ClientStat as string,",
+				"          PayrollCycleDays as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1"
 			]

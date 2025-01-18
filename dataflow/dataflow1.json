@@ -53,7 +53,7 @@
 				"     skipDuplicateMapOutputs: false) ~> select1",
 				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     partitionFileNames:[(concat('CUID', toString(currentUTC(), 'yyyyMMddHHmmss'), '.csv'))],",
+				"     partitionFileNames:[(concat($ClientCUID, toString(currentUTC(), 'yyyyMMddHHmmss'), '.csv'))],",
 				"     truncate: true,",
 				"     umask: 0022,",
 				"     preCommands: [],",

@@ -20,7 +20,7 @@
 						"type": "DataFlowReference",
 						"parameters": {
 							"ClientCUID": {
-								"value": "@pipeline().parameters.CliendCUID_Pipeline",
+								"value": "'@{string(pipeline().parameters.CliendCUID_Pipeline)}'",
 								"type": "Expression"
 							}
 						}
@@ -35,7 +35,8 @@
 		],
 		"parameters": {
 			"CliendCUID_Pipeline": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "123456"
 			}
 		},
 		"annotations": []

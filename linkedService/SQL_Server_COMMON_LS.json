@@ -1,0 +1,31 @@
+{
+	"name": "SQL_Server_COMMON_LS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"parameters": {
+			"Server Name": {
+				"type": "string"
+			},
+			"Database Name": {
+				"type": "string"
+			},
+			"User Name": {
+				"type": "string"
+			},
+			"Password": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"server": "@{linkedService().Server Name}",
+			"database": "@{linkedService().Database Name}",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "@{linkedService().User Name}",
+			"password": "@{linkedService().Password}"
+		}
+	}
+}

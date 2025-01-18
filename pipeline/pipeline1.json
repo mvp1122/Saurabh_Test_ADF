@@ -16,14 +16,20 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "SqlServerSource",
+						"type": "AzureSqlSource",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".csv"
+						}
 					},
 					"enableStaging": false,
 					"translator": {
@@ -175,13 +181,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "TEst_2",
+						"referenceName": "Delete",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "TEST_DS",
+						"referenceName": "ADP",
 						"type": "DatasetReference"
 					}
 				]

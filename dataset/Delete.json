@@ -1,0 +1,87 @@
+{
+	"name": "Delete",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CUID",
+				"type": "varchar"
+			},
+			{
+				"name": "ClientName",
+				"type": "varchar"
+			},
+			{
+				"name": "PartnerName",
+				"type": "varchar"
+			},
+			{
+				"name": "ClientPC",
+				"type": "varchar"
+			},
+			{
+				"name": "ClientPCEmail",
+				"type": "varchar"
+			},
+			{
+				"name": "ClientPCContact",
+				"type": "varchar"
+			},
+			{
+				"name": "PartnerManager",
+				"type": "varchar"
+			},
+			{
+				"name": "PartnerManagerContact",
+				"type": "varchar"
+			},
+			{
+				"name": "PartnerManagerEmail",
+				"type": "varchar"
+			},
+			{
+				"name": "AdhocPayrollRequest",
+				"type": "varchar"
+			},
+			{
+				"name": "GoLiveDate",
+				"type": "date"
+			},
+			{
+				"name": "TerminationDate",
+				"type": "date"
+			},
+			{
+				"name": "ContractStartDate",
+				"type": "date"
+			},
+			{
+				"name": "ContractEndDate",
+				"type": "date"
+			},
+			{
+				"name": "ClientStatus",
+				"type": "varchar"
+			},
+			{
+				"name": "PayrollCycleDays",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ISM"
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"name": "ADP2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ISM_NEW.csv",
+				"folderPath": "RAW",
+				"fileSystem": "adp"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "1",
+				"type": "String"
+			},
+			{
+				"name": "CUID1",
+				"type": "String"
+			},
+			{
+				"name": "Client1",
+				"type": "String"
+			},
+			{
+				"name": "Partner1",
+				"type": "String"
+			},
+			{
+				"name": "PC1",
+				"type": "String"
+			},
+			{
+				"name": "PCE1",
+				"type": "String"
+			},
+			{
+				"name": "PCC1",
+				"type": "String"
+			},
+			{
+				"name": "M1",
+				"type": "String"
+			},
+			{
+				"name": "Mi1",
+				"type": "String"
+			},
+			{
+				"name": "Yes",
+				"type": "String"
+			},
+			{
+				"name": "2023-01-0110",
+				"type": "String"
+			},
+			{
+				"name": "2023-12-3111",
+				"type": "String"
+			},
+			{
+				"name": "2023-01-0112",
+				"type": "String"
+			},
+			{
+				"name": "2023-12-3113",
+				"type": "String"
+			},
+			{
+				"name": "Active",
+				"type": "String"
+			},
+			{
+				"name": "15",
+				"type": "String"
+			}
+		]
+	}
+}

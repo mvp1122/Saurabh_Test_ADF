@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": "ISM_NEW.csv",
 				"folderPath": "RAW",
 				"fileSystem": "adp"
 			},

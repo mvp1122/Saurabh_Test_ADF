@@ -9,9 +9,11 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation"
+				"type": "AzureBlobFSLocation",
+				"fileName": "FinalFile.csv"
 			},
 			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""

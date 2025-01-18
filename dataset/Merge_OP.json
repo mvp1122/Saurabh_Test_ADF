@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "FinalFile.csv"
+				"fileName": "FinalFile.csv",
+				"fileSystem": "adp"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",

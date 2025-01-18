@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "ISM_NEW.csv",
+				"fileName": "sales_table.csv",
 				"folderPath": "RAW",
 				"fileSystem": "adp"
 			},

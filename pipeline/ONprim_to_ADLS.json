@@ -56,7 +56,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "vm_adls_STORAGE_DS",
+						"referenceName": "11223_WeWork",
 						"type": "DatasetReference"
 					}
 				]

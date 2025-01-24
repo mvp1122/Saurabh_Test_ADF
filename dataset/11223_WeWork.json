@@ -14,7 +14,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": {
-					"value": "@concat('11223_',formatDateTime(convertFromUtc(utcNow(),'India Standard Time'), 'dd-MM-yyyy'),'.csv')",
+					"value": "@concat('11223_',formatDateTime(addMinutes(addHours(utcNow(), 5), 30), 'dd-MM-yyyy'),'.csv') ",
 					"type": "Expression"
 				},
 				"folderPath": "A-adls-raw-ISM",

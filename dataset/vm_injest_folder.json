@@ -9,8 +9,7 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "FileServerLocation",
-				"fileName": "Sales_IND_2020.csv"
+				"type": "FileServerLocation"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -19,7 +18,39 @@
 		},
 		"schema": [
 			{
-				"name": "Col1",
+				"name": "CID",
+				"type": "String"
+			},
+			{
+				"name": "CUID",
+				"type": "String"
+			},
+			{
+				"name": "Client Name",
+				"type": "String"
+			},
+			{
+				"name": "Client Privilege Contact Name",
+				"type": "String"
+			},
+			{
+				"name": "Client Privilege Contact Email",
+				"type": "String"
+			},
+			{
+				"name": "Employee Name",
+				"type": "String"
+			},
+			{
+				"name": "Employee ID",
+				"type": "String"
+			},
+			{
+				"name": "Login Hours",
+				"type": "String"
+			},
+			{
+				"name": "Payroll Process Status",
 				"type": "String"
 			}
 		]

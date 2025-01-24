@@ -1,17 +1,21 @@
 {
-	"name": "vm_adls_STORAGE_DS",
+	"name": "11223_WeWork",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "vm_adls_LINKED_SERVICE",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "ADP"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Ingest",
-				"fileSystem": "raw-data"
+				"fileName": "@concat('11223_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
+				"folderPath": "A-adls-raw-ISM",
+				"fileSystem": "adp-ismcontainer"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

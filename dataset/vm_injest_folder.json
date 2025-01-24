@@ -9,7 +9,8 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "FileServerLocation"
+				"type": "FileServerLocation",
+				"fileName": "Sales_IND_2020.csv"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

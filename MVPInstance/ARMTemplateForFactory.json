@@ -113,7 +113,14 @@
 					{
 						"name": "Copy From HOST",
 						"type": "Copy",
-						"dependsOn": [],
+						"dependsOn": [
+							{
+								"activity": "Lookup1",
+								"dependencyConditions": [
+									"Succeeded"
+								]
+							}
+						],
 						"policy": {
 							"timeout": "0.12:00:00",
 							"retry": 0,
@@ -170,6 +177,20 @@
 								"parameters": {}
 							}
 						]
+					},
+					{
+						"name": "Lookup1",
+						"type": "Lookup",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {}
 					}
 				],
 				"policy": {
@@ -415,7 +436,7 @@
 					"location": {
 						"type": "AzureBlobFSLocation",
 						"fileName": {
-							"value": "@concat('11223_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
+							"value": "@concat('11223_',formatDateTime(convertFromUtc(utcNow(),'India Standard Time'), 'dd-MM-yyyy'),'.csv')",
 							"type": "Expression"
 						},
 						"folderPath": "A-adls-raw-ISM",

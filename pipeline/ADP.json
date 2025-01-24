@@ -77,18 +77,18 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "adp_latest_ingest_ds",
+						"referenceName": "vm_injest_folder",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
-						"itemType"
+						"lastModified"
 					],
 					"storeSettings": {
 						"type": "FileServerReadSettings",
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "BinaryReadSettings"
+						"type": "DelimitedTextReadSettings"
 					}
 				}
 			},
@@ -97,18 +97,11 @@
 				"type": "IfCondition",
 				"state": "Inactive",
 				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [
-					{
-						"activity": "Get Metadata1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@contains(string(activity('Get Metadata1').output.created),string(formatDateTime(addMinutes(addHours(utcNow(),5),30),'yyyy-MM-dd')))",
+						"value": "@equals(substring(activity('Get Metadata1').output.lastModified,0,10), substring(string(formatDateTime(utcNow(),'yyyy-MM-dd')),0,10))\n",
 						"type": "Expression"
 					},
 					"ifFalseActivities": [
@@ -184,8 +177,26 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get Metadata1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
+		"variables": {
+			"gg": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }

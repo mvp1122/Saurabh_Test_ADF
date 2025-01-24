@@ -8,10 +8,16 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
 		"Blob_IR_connectionString": {
 			"value": ""
 		},
 		"FileServer1_password": {
+			"value": ""
+		},
+		"Test_password": {
 			"value": ""
 		},
 		"VM_LS_password": {
@@ -23,6 +29,15 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://adlsgen2mvp.dfs.core.windows.net/"
 		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "2025-sql-azure.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "2025-sql"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "sql-2025"
+		},
 		"FileServer1_properties_typeProperties_host": {
 			"value": "\\Host\\"
 		},
@@ -32,6 +47,24 @@
 		"OTTAzureKeyVault1_properties_typeProperties_baseUrl": {
 			"value": "https://mvpkeyvalt.vault.azure.net/"
 		},
+		"SQL_Server_COMMON_LS_properties_typeProperties_server": {
+			"value": "@{linkedService().Server Name}"
+		},
+		"SQL_Server_COMMON_LS_properties_typeProperties_database": {
+			"value": "@{linkedService().Database Name}"
+		},
+		"SQL_Server_COMMON_LS_properties_typeProperties_userName": {
+			"value": "@{linkedService().User Name}"
+		},
+		"Test_properties_typeProperties_server": {
+			"value": "2025-sql-azure.database.windows.net"
+		},
+		"Test_properties_typeProperties_database": {
+			"value": "2025-sql"
+		},
+		"Test_properties_typeProperties_userName": {
+			"value": "sql-2025"
+		},
 		"VM_LS_properties_typeProperties_host": {
 			"value": "C:\\Host"
 		},
@@ -39,10 +72,7 @@
 			"value": "saurabh-vm"
 		},
 		"vm_adls_LINKED_SERVICE_properties_typeProperties_url": {
-			"value": "https://adlsgen2mvp.dfs.core.windows.net/"
-		},
-		"event_trigger_properties_typeProperties_scope": {
-			"value": "/subscriptions/4397de67-ed69-48d5-a41d-001ec760acde/resourceGroups/MVPResourcegrp/providers/Microsoft.Storage/storageAccounts/adlsgen2mvp"
+			"value": "https://adpingestmain.dfs.core.windows.net/"
 		}
 	}
 }

@@ -1,0 +1,24 @@
+{
+	"name": "Suraj",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Suraj",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-01-24T00:00:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

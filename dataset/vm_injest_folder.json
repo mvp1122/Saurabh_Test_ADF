@@ -5,6 +5,9 @@
 			"referenceName": "VM_LS",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "ADP"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

@@ -1,0 +1,26 @@
+{
+	"name": "11223_WeWork_Sink_Backup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "vm_adls_LINKED_SERVICE",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "11223 WeWork"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "A-adls-raw-ISM-Backup",
+				"fileSystem": "adp-ismcontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

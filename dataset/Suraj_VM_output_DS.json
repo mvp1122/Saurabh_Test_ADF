@@ -1,0 +1,30 @@
+{
+	"name": "Suraj_VM_output_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Suraj_Project",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Suraj"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat('Apple_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
+					"type": "Expression"
+				},
+				"folderPath": "Bronze",
+				"fileSystem": "suraj"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

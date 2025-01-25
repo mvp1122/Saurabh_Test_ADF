@@ -1,0 +1,61 @@
+{
+	"name": "Suraj_VM_Injest_DS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "VM_LS",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Suraj"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CID",
+				"type": "String"
+			},
+			{
+				"name": "CUID",
+				"type": "String"
+			},
+			{
+				"name": "Client Name",
+				"type": "String"
+			},
+			{
+				"name": "Client Privilege Contact Name",
+				"type": "String"
+			},
+			{
+				"name": "Client Privilege Contact Email",
+				"type": "String"
+			},
+			{
+				"name": "Employee Name",
+				"type": "String"
+			},
+			{
+				"name": "Employee ID",
+				"type": "String"
+			},
+			{
+				"name": "Login Hours",
+				"type": "String"
+			},
+			{
+				"name": "Payroll Process Status",
+				"type": "String"
+			}
+		]
+	}
+}

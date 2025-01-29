@@ -1,0 +1,19 @@
+{
+	"name": "DELETE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Suraj_Project",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "*",
+				"folderPath": "Bronze",
+				"fileSystem": "suraj"
+			}
+		}
+	}
+}

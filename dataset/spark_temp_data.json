@@ -1,16 +1,19 @@
 {
-	"name": "DELETE",
+	"name": "spark_temp_data",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Suraj_Project",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Suraj"
 		},
 		"annotations": [],
 		"type": "Binary",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Bronze",
+				"folderPath": "Silver/11223_Output_temp",
 				"fileSystem": "suraj"
 			}
 		}

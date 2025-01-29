@@ -1,5 +1,5 @@
 {
-	"name": "Suraj_VM_output_DS",
+	"name": "Name_Conversion",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Suraj_Project",
@@ -13,11 +13,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@concat('Apple_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
-					"type": "Expression"
-				},
-				"folderPath": "Bronze/11223_Ingest",
+				"fileName": "@concat('Apple_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
+				"folderPath": "Silver/11223_Output",
 				"fileSystem": "suraj"
 			},
 			"columnDelimiter": ",",

@@ -1,0 +1,6 @@
+{
+	"name": "VM-IR",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

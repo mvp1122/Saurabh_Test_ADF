@@ -7,7 +7,7 @@
 		"typeProperties": {
 			"host": "C:\\Host",
 			"userId": "saurabh-vm",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI3MzExY2JhNC00MzIwLTQxYjItYjRlNS1hNjM1ZGUyNDkwMTIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkZWUwYTZhNy03ZWIyLTQ2NjMtYTdhZS1jMzkxZGJkNTVmZjgiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
 		},
 		"connectVia": {
 			"referenceName": "VM-IR",

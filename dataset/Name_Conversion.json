@@ -13,7 +13,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "@concat('Apple_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
+				"fileName": {
+					"value": "@concat('Apple_',formatDateTime(utcNow(), 'dd-MM-yyyy'),'.csv')",
+					"type": "Expression"
+				},
 				"folderPath": "Silver/11223_Output",
 				"fileSystem": "suraj"
 			},
@@ -23,5 +26,6 @@
 			"quoteChar": "\""
 		},
 		"schema": []
-	}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
 }

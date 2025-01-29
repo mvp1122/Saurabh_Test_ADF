@@ -1,0 +1,9 @@
+{
+	"name": "ADF-paygMVP",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ead714ad-49fc-423c-83d7-4f496528c45e",
+		"tenantId": "a865bdd2-e813-4afb-a54f-6ca4346b3ea5"
+	}
+}

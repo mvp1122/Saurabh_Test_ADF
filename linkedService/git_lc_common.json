@@ -1,0 +1,12 @@
+{
+	"name": "git_lc_common",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/Raghavarora09/tokyo-olympic-data/tree/refs/heads/main/data/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

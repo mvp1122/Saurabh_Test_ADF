@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -49,17 +49,34 @@
 				"inputs": [
 					{
 						"referenceName": "git_ingest",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"File_Name_DS_IN": {
+								"value": "@pipeline().parameters.File_Name",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "TEST",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"File_Name_DS_Out": {
+								"value": "@pipeline().parameters.File_Name",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"File_Name": {
+				"type": "string"
+			}
+		},
 		"annotations": []
 	}
 }

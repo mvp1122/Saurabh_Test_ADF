@@ -3,7 +3,18 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "Git_LS",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"File_Name_LS": {
+					"value": "@dataset().File_Name_DS_IN",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"File_Name_DS_IN": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",

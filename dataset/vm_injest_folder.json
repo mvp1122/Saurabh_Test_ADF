@@ -1,10 +1,6 @@
 {
 	"name": "vm_injest_folder",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "VM_LS",
-			"type": "LinkedServiceReference"
-		},
 		"folder": {
 			"name": "ADP"
 		},

@@ -1,10 +1,6 @@
 {
 	"name": "Suraj_VM_Injest_DS",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "VM_LS",
-			"type": "LinkedServiceReference"
-		},
 		"folder": {
 			"name": "Suraj"
 		},

@@ -1,0 +1,9 @@
+{
+	"name": "DATAFACTORY-MVP",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "42ee71f2-5fe2-40d6-8d6d-6970dd7e9407",
+		"tenantId": "4def3d41-ecee-46b0-888d-170c320957b9"
+	}
+}
